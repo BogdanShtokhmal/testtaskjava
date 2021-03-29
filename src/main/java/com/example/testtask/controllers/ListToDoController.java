@@ -45,28 +45,14 @@ public class ListToDoController {
     }
 
 
-//    @GetMapping("/save")
-//    public void save(){
-//        ListToDo listToDo = new ListToDo();
-//        listToDo.setTitle("listtodo1");
-//
-//        List<Todo> todos = new ArrayList<>();
-//        todos.add(new Todo("todo1"));
-//        todos.add(new Todo("todo2"));
-//        listToDo.setTodos(todos);
-//        listToDoDAO.save(listToDo);
-//
-//        ListToDo listToDo2 = new ListToDo();
-//        listToDo2.setTitle("listtodo2");
-//
-//        List<Todo> todos2 = new ArrayList<>();
-//        todos2.add(new Todo("todo3","xvxvxvx", "23.04.21"));
-//        todos2.add(new Todo("todo3","xvxvxvx", "23.04.21"));
-//        listToDo2.setTodos(todos2);
-//
-//
-//        listToDoDAO.save(listToDo2);
-//    }
+    @DeleteMapping("/{id}/delete")
+    public void delete(@PathVariable int id) {
+       listToDoDAO.deleteById(id);
+    }
+
+
+
+
 
 
 }
