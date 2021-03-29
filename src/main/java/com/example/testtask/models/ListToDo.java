@@ -28,6 +28,7 @@ public class ListToDo {
 
     private List<Todo> todos = new ArrayList<>();
 
+
     public ListToDo(String title) {
         this.title = title;
     }
